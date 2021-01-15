@@ -6,9 +6,9 @@
 
 body{
     /*change*/
-    background: #8e9eab;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #7ee8fa;
+background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+
     font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
@@ -54,7 +54,7 @@ header button {
 .fav-container {
      padding: 0.25rem 1rem; 
     text-align: center;
-    background-color: rgb(231, 231, 241);  /*change*/
+    background-color: rgb(247, 231, 216);  /*change*/
     justify-content: center;
     align-items: center;
 }
@@ -95,12 +95,12 @@ header button {
 
 .meal-header .random{
     position: absolute;
-    top: 1rem;
+    top: 10px;
     background-color: white;
-    padding: 0.25rem 1rem;
+    padding: 0.25rem 0.5rem;
     border-top-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
+    border-bottom-right-radius: 3px;
+} 
 
 .meal-header img {
     height: 250px;
@@ -111,7 +111,7 @@ header button {
 .meal-body {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between ;
     padding: 1rem;
 }
 
@@ -128,5 +128,5 @@ header button {
 }
 
 .meal-body .fav-btn.active {
-    color: rgb(201, 47, 98);
+    color: rgb(233, 4, 80);
 }
