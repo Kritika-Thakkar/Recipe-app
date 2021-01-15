@@ -6,8 +6,9 @@
 
 body{
     /*change*/
-    background-color: #7ee8fa;
-background-image: linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+    background-color: #6b0f1a;
+background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+
 
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -54,7 +55,7 @@ header button {
 .fav-container {
      padding: 0.25rem 1rem; 
     text-align: center;
-    background-color: rgb(247, 231, 216);  /*change*/
+    background-color: rgb(247, 216, 187);  /*change*/
     justify-content: center;
     align-items: center;
 }
@@ -77,7 +78,7 @@ header button {
     object-fit: cover;
     height: 70px;
     width: 70px;
-    border: 2px solid rgb(224, 223, 221);  /*change*/
+    border: 2px solid  rgb(247, 216, 187);  /*change*/
 }  
 
 .fav-meals li span {
@@ -128,5 +129,5 @@ header button {
 }
 
 .meal-body .fav-btn.active {
-    color: rgb(233, 4, 80);
+    color: /*rgb(233, 4, 80);*/ #ec098a;
 }

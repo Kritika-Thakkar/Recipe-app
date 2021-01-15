@@ -21,6 +21,8 @@ async function getMealsBySearch(term) {
 }
 
 function addMeal(mealData, random = false) {
+    console.log(mealData);
+    
     const meal = document.createElement("div");
     meal.classList.add('meal');
 
@@ -33,6 +35,36 @@ function addMeal(mealData, random = false) {
     <button class="fav-btn"><i class="fas fa-heart"></i></button>
 </div>`;
 
+const btn = meal.querySelector(".meal-body .fav-btn");
+
+btn.addEventListener("click", () => {
+    if(btn.classList.contains('active')){
+        removeMealFromLS(mealData.idMeal)
+        btn.classList.remove("active");
+    } else {
+        addMealToLS(mealData.idMeal);
+        btn.classList.add("active");
+    }
+    
+});
+
 meals.appendChild(meal);
 }
 
+function addMealToLS(mealId) {
+    const mealIds = getMealsFromLS();
+
+    localStorage.setItem('mealIds', JSON.stringify([...mealIds, mealId]));
+}
+
+function removeMealFromLS() {
+    const mealIds = getMealsFromLS();
+
+    localStorage.setItem('mealIds', JSON.stringify(mealIds.filter(id => id !== mealId)));
+}
+
+function getMealsFromLS() {
+    const mealIds = JSON.parse(localStorage.getItem('mealIds'));
+
+    return mealIds;
+}
