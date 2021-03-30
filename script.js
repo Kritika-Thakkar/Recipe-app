@@ -86,5 +86,5 @@ async function fetchFavMeals() {
         meals.push(meal);
     }
 
-    console.log(meals);
+    console.log(mealIds);
 }
